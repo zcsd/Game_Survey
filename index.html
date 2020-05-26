@@ -4,19 +4,23 @@
         <title>NTU GAME</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="modern.css" type="text/css" rel="stylesheet"/>
+        <link href="assets/css/modern.css" type="text/css" rel="stylesheet"/>
     </head>
     <body>
-        <div id="surveyElement"></div>
+        <div id='language' style='margin: auto;text-align: center;left: 50%;top: 50%;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);'>
+		    <h5 id='resTitle'>选择语言 / Select Language</h5>
+			<p id='buttonChn'><input type='button', value='中     文', class='sv-btn sv-footer__start-btn'></p>
+			<p id='buttonEng'><input type='button', value='English', class='sv-btn sv-footer__start-btn'></p>
+		</div>
+		<div id="surveyElement"></div>
         <div id="surveyResult" style="margin-left:5%;margin-right:3%;margin-top:15px;margin-bottom:15px; padding:10px;">
 		    <h2 id='resTitle'></h2>
             <p id='idName'></p>
 			<p id='statement'></p>
 			<p id='button'></p>
 		</div>
-        <script src="jquery.js"></script>
-        <script src="survey.jquery.js"></script>
-        <script type="text/javascript" src="./index.js"></script>
-
+        <script src="assets/js/jquery.js"></script>
+        <script src="assets/js/survey.jquery.js"></script>
+        <script type="text/javascript" src="assets/js/index.js"></script>
     </body>
 </html>
