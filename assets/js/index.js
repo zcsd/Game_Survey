@@ -1257,38 +1257,38 @@ function sendDataToServer(result) {
 		document.querySelector('#statement').innerHTML = content;	
 		document.querySelector('#button').innerHTML = "<input type='button', value='去玩游戏', class='sv-btn sv-footer__next-btn'>";
 	}else if(language == 'English') {
-		document.querySelector('#resTitle').innerHTML = '<b>Survey Result</b><hr>';
+		document.querySelector('#resTitle').innerHTML = '<b>Questionnaire Results</b><hr>';
 		document.querySelector('#idName').innerHTML = '<b>Game ID: </b>' + gameID;
 		
-		var content = '该测试从以下四个维度测量学习风格：<br>';
+		var content = 'There are four dimensions of learning style, with each dimension having two opposite categories：<br>';
 		//console.log(style1A, style1B, style2A, style2B, style3A, style3B, style4A, style4B);
 		
 		content += "<br><b>*Active/Reflective</b><br>"
 		if (style1A > style1B){
-			content += "你是<u>主动型学习者</u>。主动型学习者倾向于积极参与活动来理解学到的新知识，例如参与讨论，将学到的知识实际运用等。<br>"
+			content += "You are <u>Active Learner</u>. Active learners tend to retain and understand information best by doing something active with it—discussing or applying it or explaining it to others, tend to like group work.<br>"
 		}else{
-			content += "你是<u>反思型学习者</u>。反思型学习者倾向于单独思考学习的新知识。<br>"
+			content += "You are <u>Reflective Learner</u>. Reflective learners prefer to think about it quietly first, prefer working alone.<br>"
 		}
 		
 		content += "<br><b>*Sensing/Intuitive</b><br>"
 		if (style2A > style2B){
-			content += "你是<u>感受型学习者</u>。感受型学习者偏好学习具体的事实，喜欢用固有的方式解决问题，较有耐心的完成细节， 并且无法接受所学的内容和真实世界是没有关联的。<br>"
+			content += "You are <u>Sensing Learner</u>. Sensing learners tend to like learning facts, often like solving problems by well-established methods and dislike complications and surprises.<br>"
 		}else{
-			content += "你是<u>直觉型学习者</u>。直觉型学习者喜欢创新，不喜欢重复而规律的事物，擅长理解新的概念，无法忍受填鸭式的大量记忆和冗长枯燥的计算。<br>"
+			content += "You are <u>Intuitive Learner</u>. Intuitive learners often prefer discovering possibilities and relationships, like innovation and dislike repetition.<br>"
 		}
 		
 		content += "<br><b>*Visual/Verbal</b><br>"
 		if (style3A > style3B){
-			content += "你是<u>视觉型学习者</u>。视觉型学习者在使用图片、图表、架构图、视频等具体事物的呈现中会有较好的学习表现。<br>"
+			content += "You are <u>Visual Learner</u>. Visual learners remember best what they see—pictures, diagrams, flow charts, time lines, films, and demonstrations.<br>"
 		}else{
-			content += "你是<u>文字型学习者</u>，文字型学习者更加偏好文字说明或者口述讲解。<br>"
+			content += "You are <u>Verbal Learner</u>，Verbal learners get more out of words—written and spoken explanations. <br>"
 		}
 		
 		content += "<br><b>*Sequential/Global</b><br>"
 		if (style4A > style4B){
-			content += "你是<u>循序型学习者</u>。循序型学习者倾向于按部就班的进行学习，一步一步按照逻辑前进，一个阶段一个阶段的找出答案。<br>"
+			content += "You are <u>Sequential Learner</u>. Sequential learners tend to gain understanding in linear steps, with each step following logically from the previous one, tend to follow logical stepwise paths in finding solutions.<br>"
 		}else{
-			content += "你是<u>整体型学习者</u>，整体型学习者偏好跳跃式的学习，一旦领悟到整体的大方向后，就能迅速解决复杂的难题，但是却不一定能够解释是如何办到的。<br>"
+			content += "You are <u>Global Learner</u>，Global learners tend to learn in large jumps, absorbing material almost randomly without seeing connections, and then suddenly “getting it.”, may be able to solve complex problems quickly or put things together in novel ways once they have grasped the big picture.<br>"
 		}
 		
 		content += "<br><b>Now you can click “Play Game” button, and you need to fill in the game ID in the following game login page.</b>"
