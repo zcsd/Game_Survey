@@ -1023,10 +1023,23 @@ function sendDataToServer(result) {
 		}
 	}
 	
+	var style = '';
+	if(style1A > style1B) {
+		style = 'A_'; //Active
+	}else {
+		style = 'R_'; //Reflective
+	}
+	
+	if(style2A > style2B) {
+		style += 'S'; //Sensing
+	}else {
+		style += 'I'; //Intuitive
+	}
+	
 	var gameID = result.data.question0_1;
 	
 	var data = {'gameID': gameID, 'gender': result.data.question0_2, 'birthdate': result.data.question0_3, 'email': result.data.question0_4,
-				'style1A': style1A, 'style1B': style1B,  'style2A': style2A, 'style2B': style2B};
+				'style1A': style1A, 'style1B': style1B,  'style2A': style2A, 'style2B': style2B, 'style': style};
 	
 	sendToServer(data);
 	
@@ -1119,7 +1132,7 @@ function sendToServer(data){
 		
 		var toSent = 'gameID=' + data.gameID + '&gender=' + data.gender + '&birthdate=' + data.birthdate + '&email=' + data.email + 
 					 '&style1A=' + data.style1A.toString() + '&style1B=' + data.style1B.toString() +
-					 '&style2A=' + data.style2A.toString() + '&style2B=' + data.style2B.toString();
+					 '&style2A=' + data.style2A.toString() + '&style2B=' + data.style2B.toString() + '&style=' + data.style;
         xhr.send(toSent);
 }
 
