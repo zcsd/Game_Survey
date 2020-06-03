@@ -1041,6 +1041,8 @@ function sendDataToServer(result) {
 	var data = {'gameID': gameID, 'gender': result.data.question0_2, 'birthdate': result.data.question0_3, 'email': result.data.question0_4,
 				'style1A': style1A, 'style1B': style1B,  'style2A': style2A, 'style2B': style2B, 'style': style};
 	
+	localStorage.setItem('learningStyle', style);
+	
 	sendToServer(data);
 	
 	if (language == 'Chinese') {
